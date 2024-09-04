@@ -28,10 +28,6 @@ grosor.addEventListener("change", () => {
 });
 
 dibujar.addEventListener("click", () => {
-  canvas.removeEventListener("touchstart", dibujarRectangulo);
-  canvas.removeEventListener("touchend", pararRectangulo);
-  canvas.removeEventListener("touchmove", movimientoRectangulo);
-
   canvas.removeEventListener("mousedown", dibujarRectangulo);
   canvas.removeEventListener("mouseup", pararRectangulo);
   canvas.removeEventListener("mousemove", movimientoRectangulo);
@@ -39,24 +35,15 @@ dibujar.addEventListener("click", () => {
   canvas.addEventListener("touchstart", comenzarDibujo);
   canvas.addEventListener("touchend", pararDibujo);
   canvas.addEventListener("touchmove", movimientoDibujo);
-
   canvas.addEventListener("mousedown", comenzarDibujo);
   canvas.addEventListener("mouseup", pararDibujo);
   canvas.addEventListener("mousemove", movimientoDibujo);
 });
 
 rectangulo.addEventListener("click", () => {
-  canvas.removeEventListener("touchstart", comenzarDibujo);
-  canvas.removeEventListener("touchend", pararDibujo);
-  canvas.removeEventListener("touchmove", movimientoDibujo);
-
   canvas.removeEventListener("mousedown", comenzarDibujo);
   canvas.removeEventListener("mouseup", pararDibujo);
   canvas.removeEventListener("mousemove", movimientoDibujo);
-
-  canvas.addEventListener("touchstart", dibujarRectangulo);
-  canvas.addEventListener("touchend", pararRectangulo);
-  canvas.addEventListener("touchmove", movimientoRectangulo);
 
   canvas.addEventListener("mousedown", dibujarRectangulo);
   canvas.addEventListener("mouseup", pararRectangulo);
