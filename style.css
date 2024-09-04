@@ -42,3 +42,19 @@ canvas {
   height: 400px;
   background-color: white;
 }
+
+@media screen and (max-width: 450px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  canvas {
+    width: 300px;
+    height: 150px;
+  }
+  .herramientas {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+}
